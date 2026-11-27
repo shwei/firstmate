@@ -1,0 +1,50 @@
+Live Lavish regression: synthetic loopback HTML, isolated Chrome profile, named Chrome AXI sessions, disposable FM_HOME and Lavish state, Lavish bound to loopback with UI auto-open disabled.
+Target: 91f801193ccecb93e1b282421893633c459d71c3
+Control: 326ba38eaa77a2acffcce18407dfe8465edf884a
+Lab setup: bin/fm-lab-home.sh create "$FM_HOME"
+Control tree: git archive "$base" | tar -x -C "$SCRATCH/base"; git show "$base:bin/fm-lavish-url.sh" > "$SCRATCH/base/bin/fm-lavish-url.sh"
+Fixture server: python3 -m http.server 64118 --bind 127.0.0.1 --directory "$SCRATCH/fixture"
+Output and second-origin CSS server: python3 -m http.server 64119 --bind 127.0.0.1 --directory "$SCRATCH/served"
+Browser inspection and rendering used CHROME_DEVTOOLS_AXI_SESSION=fm-lab-lavish-owner-60512 with a scratch Chrome profile. Capture bridges attach via the local debug port so the original page remains inspectable after capture closes its bridge.
+Browser commands: chrome-devtools-axi open about:blank; chrome-devtools-axi pages; chrome-devtools-axi selectpage <fixture tab ID> --no-snapshot; chrome-devtools-axi eval --full <live state and mutation observer query>; chrome-devtools-axi screenshot "$EVIDENCE/lavish-live.png".
+For each variant: chrome-devtools-axi open http://127.0.0.1:64119/<fixed or base>.html; chrome-devtools-axi eval --full <wait for load>; chrome-devtools-axi eval --full <owner DOM and getComputedStyle query>; chrome-devtools-axi screenshot "$EVIDENCE/lavish-<fixed or base>.png".
+Live oracle: compare same-page DOM/stylesheet state before and after capture and observe all subtree mutations from fixture load onward. Snapshot oracle: compare each owner and computed target color in the persistent named browser session, separate from the capture bridges.
+Browser: Chrome/158.0.8127.38
+
+Capture (fixed): FM_HOME="$LAB" FM_LAVISH_URL_BROWSER_SESSION=fm-lab-lavish-fixed-60512 CHROME_DEVTOOLS_AXI_BROWSER_URL=http://127.0.0.1:64120 bash bin/fm-lavish-url.sh snapshot http://127.0.0.1:64118/
+snapshot: $SCRATCH/lab/.lavish/snapshots/127-0-0-1-64118-20261127T220225Z.html
+url: http://127.0.0.1:64118/
+viewport: desktop 1440x900
+enhancers: default
+session-url: http://127.0.0.1:64121/session/58689e31081de38f
+source-id: lavish-58689e31081de38f
+armed: lavish-58689e31081de38f
+route: unrouted
+host: 127.0.0.1
+basis: a local or address-only host names no project; map it in config/lavish-url-domains
+Snapshot CLI exit status: 0
+
+Capture (base): FM_HOME="$LAB" FM_LAVISH_URL_BROWSER_SESSION=fm-lab-lavish-base-60512 CHROME_DEVTOOLS_AXI_BROWSER_URL=http://127.0.0.1:64120 bash $SCRATCH/base/bin/fm-lavish-url.sh snapshot http://127.0.0.1:64118/
+snapshot: $SCRATCH/lab/.lavish/snapshots/127-0-0-1-64118-20261127T220236Z.html
+url: http://127.0.0.1:64118/
+viewport: desktop 1440x900
+enhancers: default
+session-url: http://127.0.0.1:64121/session/f89e2a4ed0fc4dba
+source-id: lavish-f89e2a4ed0fc4dba
+armed: lavish-f89e2a4ed0fc4dba
+route: unrouted
+host: 127.0.0.1
+basis: a local or address-only host names no project; map it in config/lavish-url-domains
+Snapshot CLI exit status: 0
+
+Browser observations (linked / inline):
+live: rgba(0, 0, 0, 0) / rgba(0, 0, 0, 0)
+fixed: rgba(0, 0, 0, 0) / rgba(0, 0, 0, 0)
+base: rgb(255, 0, 0) / rgb(255, 0, 0)
+PASS: Fixed capture keeps linked and inline rules inactive and preserves owner/media
+PASS: Capture makes no writes to live page, including temporary edits and marker collisions
+PASS: Disabled inaccessible and adopted sheets stay inactive; enabled CSSOM and fallback order hold
+PASS: Base commit reproduces red linked and inline targets
+lavish-axi end: 127-0-0-1-64118-20261127T220225Z.html
+lavish-axi end: 127-0-0-1-64118-20261127T220236Z.html
+Cleanup status: 0. Live driver status: 0.

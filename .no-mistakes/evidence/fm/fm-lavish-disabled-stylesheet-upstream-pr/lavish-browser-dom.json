@@ -1,0 +1,304 @@
+{
+  "live": {
+    "url": "http://127.0.0.1:64118/",
+    "fixtureReady": true,
+    "before": {
+      "owners": {
+        "linked-sheet": {
+          "tag": "link",
+          "disabled": false,
+          "sheetDisabled": true,
+          "media": "screen",
+          "rel": "stylesheet",
+          "href": "/linked.css",
+          "text": "",
+          "marker": null
+        },
+        "inline-sheet": {
+          "tag": "style",
+          "disabled": false,
+          "sheetDisabled": true,
+          "media": "(min-width: 1px)",
+          "rel": null,
+          "href": null,
+          "text": "#inline-target { background: rgb(255, 0, 0); }",
+          "marker": null
+        },
+        "opaque-disabled": {
+          "tag": "link",
+          "disabled": false,
+          "sheetDisabled": true,
+          "media": "screen",
+          "rel": "stylesheet",
+          "href": "http://127.0.0.1:64119/opaque-disabled.css",
+          "text": "",
+          "marker": null
+        },
+        "opaque-enabled": {
+          "tag": "link",
+          "disabled": false,
+          "sheetDisabled": false,
+          "media": null,
+          "rel": "stylesheet",
+          "href": "http://127.0.0.1:64119/opaque-enabled.css",
+          "text": "",
+          "marker": null
+        },
+        "enabled-inline": {
+          "tag": "style",
+          "disabled": false,
+          "sheetDisabled": false,
+          "media": null,
+          "rel": null,
+          "href": null,
+          "text": "#cascade-target { background: rgb(255, 0, 0); }",
+          "marker": null
+        },
+        "reserved-marker": {
+          "tag": "style",
+          "disabled": false,
+          "sheetDisabled": false,
+          "media": null,
+          "rel": null,
+          "href": null,
+          "text": "#reserved-target { background: rgb(201, 237, 210); }",
+          "marker": "0"
+        }
+      },
+      "opaqueRules": "SecurityError",
+      "adoptedDisabled": [
+        true
+      ],
+      "enabledRules": [
+        "#cascade-target { background: rgb(255, 0, 0); }",
+        "#cascade-target { background: rgb(255, 140, 0); }"
+      ],
+      "colors": {
+        "linked-target": "rgba(0, 0, 0, 0)",
+        "inline-target": "rgba(0, 0, 0, 0)",
+        "opaque-target": "rgba(0, 0, 0, 0)",
+        "adopted-target": "rgba(0, 0, 0, 0)",
+        "cascade-target": "rgb(0, 90, 150)",
+        "reserved-target": "rgb(201, 237, 210)"
+      }
+    },
+    "after": {
+      "owners": {
+        "linked-sheet": {
+          "tag": "link",
+          "disabled": false,
+          "sheetDisabled": true,
+          "media": "screen",
+          "rel": "stylesheet",
+          "href": "/linked.css",
+          "text": "",
+          "marker": null
+        },
+        "inline-sheet": {
+          "tag": "style",
+          "disabled": false,
+          "sheetDisabled": true,
+          "media": "(min-width: 1px)",
+          "rel": null,
+          "href": null,
+          "text": "#inline-target { background: rgb(255, 0, 0); }",
+          "marker": null
+        },
+        "opaque-disabled": {
+          "tag": "link",
+          "disabled": false,
+          "sheetDisabled": true,
+          "media": "screen",
+          "rel": "stylesheet",
+          "href": "http://127.0.0.1:64119/opaque-disabled.css",
+          "text": "",
+          "marker": null
+        },
+        "opaque-enabled": {
+          "tag": "link",
+          "disabled": false,
+          "sheetDisabled": false,
+          "media": null,
+          "rel": "stylesheet",
+          "href": "http://127.0.0.1:64119/opaque-enabled.css",
+          "text": "",
+          "marker": null
+        },
+        "enabled-inline": {
+          "tag": "style",
+          "disabled": false,
+          "sheetDisabled": false,
+          "media": null,
+          "rel": null,
+          "href": null,
+          "text": "#cascade-target { background: rgb(255, 0, 0); }",
+          "marker": null
+        },
+        "reserved-marker": {
+          "tag": "style",
+          "disabled": false,
+          "sheetDisabled": false,
+          "media": null,
+          "rel": null,
+          "href": null,
+          "text": "#reserved-target { background: rgb(201, 237, 210); }",
+          "marker": "0"
+        }
+      },
+      "opaqueRules": "SecurityError",
+      "adoptedDisabled": [
+        true
+      ],
+      "enabledRules": [
+        "#cascade-target { background: rgb(255, 0, 0); }",
+        "#cascade-target { background: rgb(255, 140, 0); }"
+      ],
+      "colors": {
+        "linked-target": "rgba(0, 0, 0, 0)",
+        "inline-target": "rgba(0, 0, 0, 0)",
+        "opaque-target": "rgba(0, 0, 0, 0)",
+        "adopted-target": "rgba(0, 0, 0, 0)",
+        "cascade-target": "rgb(0, 90, 150)",
+        "reserved-target": "rgb(201, 237, 210)"
+      }
+    },
+    "mutations": []
+  },
+  "fixed": {
+    "url": "http://127.0.0.1:64119/fixed.html",
+    "owners": {
+      "linked-sheet": {
+        "tag": "link",
+        "disabled": true,
+        "rel": "stylesheet",
+        "href": "http://127.0.0.1:64118/linked.css",
+        "media": "screen",
+        "text": "",
+        "marker": null
+      },
+      "inline-sheet": {
+        "tag": "style",
+        "disabled": false,
+        "rel": null,
+        "href": null,
+        "media": "(min-width: 1px)",
+        "text": "",
+        "marker": null
+      },
+      "opaque-disabled": {
+        "tag": "link",
+        "disabled": true,
+        "rel": "stylesheet",
+        "href": "http://127.0.0.1:64119/opaque-disabled.css",
+        "media": "screen",
+        "text": "",
+        "marker": null
+      },
+      "opaque-enabled": {
+        "tag": "link",
+        "disabled": false,
+        "rel": "stylesheet",
+        "href": "http://127.0.0.1:64119/opaque-enabled.css",
+        "media": null,
+        "text": "",
+        "marker": null
+      },
+      "enabled-inline": {
+        "tag": "style",
+        "disabled": false,
+        "rel": null,
+        "href": null,
+        "media": null,
+        "text": "#cascade-target { background: rgb(255, 0, 0); }\n#cascade-target { background: rgb(255, 140, 0); }",
+        "marker": null
+      },
+      "reserved-marker": {
+        "tag": "style",
+        "disabled": false,
+        "rel": null,
+        "href": null,
+        "media": null,
+        "text": "#reserved-target { background: rgb(201, 237, 210); }",
+        "marker": null
+      }
+    },
+    "colors": {
+      "linked-target": "rgba(0, 0, 0, 0)",
+      "inline-target": "rgba(0, 0, 0, 0)",
+      "opaque-target": "rgba(0, 0, 0, 0)",
+      "adopted-target": "rgba(0, 0, 0, 0)",
+      "cascade-target": "rgb(0, 90, 150)",
+      "reserved-target": "rgb(201, 237, 210)"
+    },
+    "inaccessible_stylesheets": [
+      "http://127.0.0.1:64119/opaque-enabled.css"
+    ]
+  },
+  "base": {
+    "url": "http://127.0.0.1:64119/base.html",
+    "owners": {
+      "linked-sheet": {
+        "tag": "link",
+        "disabled": false,
+        "rel": "stylesheet",
+        "href": "http://127.0.0.1:64118/linked.css",
+        "media": "screen",
+        "text": "",
+        "marker": null
+      },
+      "inline-sheet": {
+        "tag": "style",
+        "disabled": false,
+        "rel": null,
+        "href": null,
+        "media": "(min-width: 1px)",
+        "text": "#inline-target { background: rgb(255, 0, 0); }",
+        "marker": null
+      },
+      "opaque-disabled": {
+        "tag": "link",
+        "disabled": false,
+        "rel": "stylesheet",
+        "href": "http://127.0.0.1:64119/opaque-disabled.css",
+        "media": "screen",
+        "text": "",
+        "marker": null
+      },
+      "opaque-enabled": {
+        "tag": "link",
+        "disabled": false,
+        "rel": "stylesheet",
+        "href": "http://127.0.0.1:64119/opaque-enabled.css",
+        "media": null,
+        "text": "",
+        "marker": null
+      },
+      "enabled-inline": {
+        "tag": "style",
+        "disabled": false,
+        "rel": null,
+        "href": null,
+        "media": null,
+        "text": "#cascade-target { background: rgb(255, 0, 0); }\n#cascade-target { background: rgb(255, 140, 0); }",
+        "marker": null
+      },
+      "reserved-marker": {
+        "tag": "style",
+        "disabled": false,
+        "rel": null,
+        "href": null,
+        "media": null,
+        "text": "#reserved-target { background: rgb(201, 237, 210); }",
+        "marker": null
+      }
+    },
+    "colors": {
+      "linked-target": "rgb(255, 0, 0)",
+      "inline-target": "rgb(255, 0, 0)",
+      "opaque-target": "rgb(255, 0, 0)",
+      "adopted-target": "rgba(0, 0, 0, 0)",
+      "cascade-target": "rgb(0, 90, 150)",
+      "reserved-target": "rgb(201, 237, 210)"
+    }
+  }
+}
