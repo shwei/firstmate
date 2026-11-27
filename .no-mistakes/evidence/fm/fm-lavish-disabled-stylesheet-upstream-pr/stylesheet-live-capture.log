@@ -1,0 +1,197 @@
+Live source swatches: {
+  "inline": "rgb(20, 124, 82)",
+  "readable": "rgb(20, 124, 82)",
+  "opaque": "rgb(20, 124, 82)",
+  "cascade": "rgb(20, 124, 82)",
+  "removed": "rgb(20, 124, 82)",
+  "adopted": "rgb(20, 124, 82)",
+  "marker-swatch": "rgb(20, 124, 82)"
+}
+
+Chrome screenshot: screenshot: ~/.no-mistakes/evidence/01M8DP8TZSE99ZSN42TZEG87TV/stylesheet-source.png
+
+$ bin/fm-lavish-url.sh snapshot http://127.0.0.1:55852/ [exit 0] snapshot: {run-worktree}/.lavish-validation.yBNjO0/fm/.lavish/snapshots/127-0-0-1-55852-20261127T052637Z.html
+url: http://127.0.0.1:55852/
+viewport: desktop 1440x900
+enhancers: default
+session-url: http://127.0.0.1:55851/session/804d0792dfbea6a1
+source-id: lavish-804d0792dfbea6a1
+armed: lavish-804d0792dfbea6a1
+route: unrouted
+host: 127.0.0.1
+basis: a local or address-only host names no project; map it in config/lavish-url-domains
+
+Source-page beacons during capture: [
+  {
+    "type": "ready",
+    "disabled": [
+      {
+        "id": "off-inline",
+        "cssom": true,
+        "ownerAttribute": false
+      },
+      {
+        "id": "off-readable",
+        "cssom": true,
+        "ownerAttribute": false
+      },
+      {
+        "id": "off-opaque",
+        "cssom": true,
+        "ownerAttribute": false
+      }
+    ],
+    "opaque": true
+  }
+]
+
+Chrome screenshot: screenshot: ~/.no-mistakes/evidence/01M8DP8TZSE99ZSN42TZEG87TV/stylesheet-snapshot.png
+
+Snapshot swatches: {
+  "inline": "rgb(20, 124, 82)",
+  "readable": "rgb(20, 124, 82)",
+  "opaque": "rgb(20, 124, 82)",
+  "cascade": "rgb(20, 124, 82)",
+  "removed": "rgb(20, 124, 82)",
+  "adopted": "rgb(20, 124, 82)",
+  "marker-swatch": "rgb(20, 124, 82)"
+}
+
+Snapshot stylesheet owners: {
+  "off-inline": {
+    "tag": "style",
+    "media": "screen",
+    "disabled": false,
+    "rel": null,
+    "href": null,
+    "text": "",
+    "marker": false
+  },
+  "off-readable": {
+    "tag": "link",
+    "media": "screen",
+    "disabled": true,
+    "rel": "stylesheet",
+    "href": "http://127.0.0.1:55852/off-readable.css",
+    "text": "",
+    "marker": false
+  },
+  "off-opaque": {
+    "tag": "link",
+    "media": "screen",
+    "disabled": true,
+    "rel": "stylesheet",
+    "href": "http://127.0.0.1:55853/off-opaque.css",
+    "text": "",
+    "marker": false
+  },
+  "on-opaque": {
+    "tag": "link",
+    "media": null,
+    "disabled": false,
+    "rel": "stylesheet",
+    "href": "http://127.0.0.1:55853/on-opaque.css",
+    "text": "",
+    "marker": false
+  },
+  "marker": {
+    "tag": "style",
+    "media": null,
+    "disabled": false,
+    "rel": null,
+    "href": null,
+    "text": "#marker-swatch { background: rgb(20, 124, 82); }",
+    "marker": false
+  }
+}
+
+Snapshot sidecar inaccessible_stylesheets: [
+  "http://127.0.0.1:55853/on-opaque.css"
+]
+
+SVG source stylesheet owners and fill: {
+  "fill": "rgb(20, 124, 82)",
+  "sheets": [
+    {
+      "node": "xml-stylesheet",
+      "rules": [
+        "#owner-rect"
+      ]
+    },
+    {
+      "node": "style",
+      "rules": [
+        "#owner-rect",
+        "text"
+      ]
+    }
+  ]
+}
+
+$ bin/fm-lavish-url.sh snapshot http://127.0.0.1:55852/svg [exit 0] snapshot: {run-worktree}/.lavish-validation.yBNjO0/fm/.lavish/snapshots/127-0-0-1-55852-svg-20261127T052648Z.html
+url: http://127.0.0.1:55852/svg
+viewport: desktop 1440x900
+enhancers: default
+session-url: http://127.0.0.1:55851/session/96754e6ea6910c86
+source-id: lavish-96754e6ea6910c86
+armed: lavish-96754e6ea6910c86
+route: unrouted
+host: 127.0.0.1
+basis: a local or address-only host names no project; map it in config/lavish-url-domains
+
+Chrome screenshot: screenshot: ~/.no-mistakes/evidence/01M8DP8TZSE99ZSN42TZEG87TV/stylesheet-owner-svg-snapshot.png
+
+SVG snapshot stylesheet owners and fill: {
+  "fill": "rgb(20, 124, 82)",
+  "sheets": [
+    {
+      "node": "STYLE",
+      "rules": [
+        "#fm-lavish-url-panel",
+        "#fm-lavish-url-panel details",
+        "#fm-lavish-url-panel summary",
+        "#fm-lavish-url-panel .fm-lu-target",
+        "#fm-lavish-url-panel .fm-lu-chips",
+        "#fm-lavish-url-panel button",
+        "#fm-lavish-url-panel button:hover, #fm-lavish-url-panel button:focus-visible",
+        "#fm-lavish-url-panel .fm-lu-note",
+        "#fm-lavish-url-panel .fm-lu-row",
+        "#fm-lavish-url-panel .fm-lu-status",
+        "#fm-lavish-url-panel .fm-lu-hint",
+        "#fm-lavish-url-outline",
+        "#fm-lavish-url-outline[data-pinned=\"yes\"]",
+        null
+      ]
+    },
+    {
+      "node": "style",
+      "rules": [
+        "#owner-rect",
+        "text"
+      ]
+    }
+  ]
+}
+
+$ bin/.fm-lavish-url-validation-base.sh snapshot http://127.0.0.1:55852/ [exit 0] snapshot: {run-worktree}/.lavish-validation.yBNjO0/fm/.lavish/snapshots/127-0-0-1-55852-20261127T052656Z.html
+url: http://127.0.0.1:55852/
+viewport: desktop 1440x900
+enhancers: default
+session-url: http://127.0.0.1:55851/session/b78fb136af96afe3
+source-id: lavish-b78fb136af96afe3
+armed: lavish-b78fb136af96afe3
+route: unrouted
+host: 127.0.0.1
+basis: a local or address-only host names no project; map it in config/lavish-url-domains
+
+Chrome screenshot: screenshot: ~/.no-mistakes/evidence/01M8DP8TZSE99ZSN42TZEG87TV/stylesheet-before-fix.png
+
+Base snapshot swatches: {
+  "inline": "rgb(194, 25, 70)",
+  "readable": "rgb(194, 25, 70)",
+  "opaque": "rgb(194, 25, 70)",
+  "cascade": "rgb(20, 124, 82)",
+  "removed": "rgb(20, 124, 82)",
+  "adopted": "rgb(20, 124, 82)",
+  "marker-swatch": "rgb(20, 124, 82)"
+}
